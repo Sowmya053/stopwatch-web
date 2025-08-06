@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stopwatch</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="circle-container">
+    <svg class="circle" width="240" height="240">
+      <circle cx="120" cy="120" r="100" stroke="#ffc0cb" stroke-width="10" fill="none" />
+      <circle id="progress" cx="120" cy="120" r="100" stroke="#f06292" stroke-width="10" fill="none"
+              stroke-dasharray="628.32" stroke-dashoffset="628.32" />
+    </svg>
+    <div class="display" id="display">00:00:00</div>
+  </div>
+
+  <div class="buttons">
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <button id="lap">Lap</button>
+    <button id="reset">Reset</button>
+  </div>
+
+  <ul id="laps"></ul>
+
+  <audio id="beep" src="https://www.soundjay.com/buttons/sounds/beep-07.mp3" preload="auto"></audio>
+  <audio id="tick" src="https://assets.mixkit.co/sfx/preview/mixkit-digital-clock-beep-990.mp3" preload="auto"></audio>
+    <!-- Confetti JS -->
+  <script src="confetti.js"></script>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+</body>
+</html>
